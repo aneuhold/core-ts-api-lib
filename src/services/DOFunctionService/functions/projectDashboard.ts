@@ -1,4 +1,3 @@
-import { UUID } from 'crypto';
 import {
   DashboardTask,
   DashboardUserConfig,
@@ -6,6 +5,7 @@ import {
   NonogramKatanaUpgrade,
   UserCTO
 } from '@aneuhold/core-ts-db-lib';
+import { UUID } from 'crypto';
 import { Translations } from '../../../types/Translations.js';
 import DOFunction, {
   DOFunctionInput,

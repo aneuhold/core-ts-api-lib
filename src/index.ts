@@ -22,21 +22,21 @@ import { DashboardConfig } from './types/DashboardConfig.js';
 import { Translation, Translations } from './types/Translations.js';
 
 // Export all the functions and classes from this library
-export { DOFunctionService, APIService };
+export { APIService, DOFunctionService };
 
 // Export TypeScript types where needed
 export type {
-  DOFunctionRawInput,
-  DOFunctionRawOutput,
-  DOFunctionCallOutput,
   AuthCheckPasswordInput,
   AuthCheckPasswordOutput,
   AuthValidateUserInput,
   AuthValidateUserOutput,
-  ProjectDashboardInput,
-  ProjectDashboardOutput,
-  ProjectDashboardOptions,
   DashboardConfig,
-  Translations,
-  Translation
+  DOFunctionCallOutput,
+  DOFunctionRawInput,
+  DOFunctionRawOutput,
+  ProjectDashboardInput,
+  ProjectDashboardOptions,
+  ProjectDashboardOutput,
+  Translation,
+  Translations
 };
