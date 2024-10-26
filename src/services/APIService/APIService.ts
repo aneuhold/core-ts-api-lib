@@ -1,6 +1,6 @@
-import DOFunctionService from '../DOFunctionService/DOFunctionService';
-import { AuthValidateUserInput } from '../DOFunctionService/functions/authValidateUser';
-import { ProjectDashboardInput } from '../DOFunctionService/functions/projectDashboard';
+import DOFunctionService from '../DOFunctionService/DOFunctionService.js';
+import { AuthValidateUserInput } from '../DOFunctionService/functions/authValidateUser.js';
+import { ProjectDashboardInput } from '../DOFunctionService/functions/projectDashboard.js';
 
 /**
  * A service for making calls to the backend API for personal projects. This is

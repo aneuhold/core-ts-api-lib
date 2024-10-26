@@ -6,8 +6,8 @@ import {
   NonogramKatanaUpgrade,
   UserCTO
 } from '@aneuhold/core-ts-db-lib';
-import { Translations } from '../../../types/Translations';
-import DOFunction, { DOFunctionInput, DOFunctionOutput } from '../DOFunction';
+import { Translations } from '../../../types/Translations.js';
+import DOFunction, { DOFunctionInput, DOFunctionOutput } from '../DOFunction.js';
 
 export interface ProjectDashboardOptions {
   get?: {

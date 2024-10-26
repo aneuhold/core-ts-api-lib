@@ -1,4 +1,4 @@
-import DOFunction, { DOFunctionInput, DOFunctionOutput } from '../DOFunction';
+import DOFunction, { DOFunctionInput, DOFunctionOutput } from '../DOFunction.js';
 
 export interface AuthCheckPasswordInput extends DOFunctionInput {
   password: string;

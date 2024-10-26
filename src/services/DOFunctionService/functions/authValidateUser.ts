@@ -1,6 +1,6 @@
 import { ApiKey, User } from '@aneuhold/core-ts-db-lib';
-import DOFunction, { DOFunctionInput, DOFunctionOutput } from '../DOFunction';
-import { DashboardConfig } from '../../../types/DashboardConfig';
+import DOFunction, { DOFunctionInput, DOFunctionOutput } from '../DOFunction.js';
+import { DashboardConfig } from '../../../types/DashboardConfig.js';
 
 export interface AuthValidateUserInput extends DOFunctionInput {
   userName: string;

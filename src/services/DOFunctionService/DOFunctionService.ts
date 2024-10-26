@@ -5,10 +5,10 @@ import {
   DOFunctionOutput,
   DOFunctionRawInput,
   DOFunctionRawOutput
-} from './DOFunction';
-import AuthCheckPassword from './functions/authCheckPassword';
-import AuthValidateUser from './functions/authValidateUser';
-import ProjectDashboard from './functions/projectDashboard';
+} from './DOFunction.js';
+import AuthCheckPassword from './functions/authCheckPassword.js';
+import AuthValidateUser from './functions/authValidateUser.js';
+import ProjectDashboard from './functions/projectDashboard.js';
 
 /**
  * A service to provide some utility related to Digital Ocean functions.
