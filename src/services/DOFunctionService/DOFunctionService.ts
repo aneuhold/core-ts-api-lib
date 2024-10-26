@@ -14,10 +14,19 @@ import ProjectDashboard from './functions/projectDashboard.js';
  * A service to provide some utility related to Digital Ocean functions.
  */
 export default class DOFunctionService {
+  /**
+   * {@link AuthCheckPassword} function instance.
+   */
   static authCheckPassword: AuthCheckPassword = AuthCheckPassword.getFunction();
 
+  /**
+   * {@link AuthValidateUser} function instance.
+   */
   static authValidateUser: AuthValidateUser = AuthValidateUser.getFunction();
 
+  /**
+   * {@link ProjectDashboard} function instance.
+   */
   static projectDashboard: ProjectDashboard = ProjectDashboard.getFunction();
 
   /**
@@ -28,8 +37,9 @@ export default class DOFunctionService {
    * Ideally the handler should not throw though unless something really
    * unexpected happened.
    *
-   * @param rawInput
-   * @param handler
+   * @param rawInput - The raw input for the function.
+   * @param handler - The handler function to process the input.
+   * @returns The raw output of the function call.
    */
   static async handleApiRequest<
     TInput extends DOFunctionInput,
@@ -62,6 +72,12 @@ export default class DOFunctionService {
     return rawOutput;
   }
 
+  /**
+   * Deserializes the raw input into a typed input object.
+   *
+   * @param rawInput - The raw input to deserialize.
+   * @returns The deserialized input object.
+   */
   private static deserializeInput<TInput extends DOFunctionInput>(
     rawInput: DOFunctionRawInput
   ): TInput {
@@ -74,6 +90,12 @@ export default class DOFunctionService {
     return BSON.deserialize(bytes) as TInput;
   }
 
+  /**
+   * Serializes the output object into a base64 string.
+   *
+   * @param output - The output object to serialize.
+   * @returns The serialized output as a base64 string.
+   */
   private static serializeOutput<TOutput extends DOFunctionOutput>(
     output: DOFunctionCallOutput<TOutput>
   ): string {

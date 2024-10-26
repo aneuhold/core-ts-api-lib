@@ -18,7 +18,8 @@ export default class APIService {
    * Validates the provided username and password against the database and
    * returns the user's information if successful.
    *
-   * @param input
+   * @param input - The input containing username and password.
+   * @returns A promise that resolves to the user's information if validation is successful.
    */
   static async validateUser(
     input: AuthValidateUserInput
@@ -27,6 +28,11 @@ export default class APIService {
     return result;
   }
 
+  /**
+   * Sets the URL for the dashboard API.
+   *
+   * @param url - The URL to be set for the dashboard API.
+   */
   static setDashboardAPIUrl(url: string) {
     DOFunctionService.projectDashboard.setUrl(url);
   }
@@ -35,7 +41,8 @@ export default class APIService {
    * Calls the dashboard API and returns the result. This will fail if the
    * dashboard API URL has not been set. See {@link setDashboardAPIUrl}.
    *
-   * @param input
+   * @param input - The input for the dashboard API call.
+   * @returns A promise that resolves to the result of the dashboard API call.
    */
   static async callDashboardAPI(
     input: ProjectDashboardInput
