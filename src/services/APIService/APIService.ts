@@ -1,6 +1,13 @@
+import { DOFunctionCallOutput } from '../DOFunctionService/DOFunction.js';
 import DOFunctionService from '../DOFunctionService/DOFunctionService.js';
-import { AuthValidateUserInput } from '../DOFunctionService/functions/authValidateUser.js';
-import { ProjectDashboardInput } from '../DOFunctionService/functions/projectDashboard.js';
+import {
+  AuthValidateUserInput,
+  AuthValidateUserOutput
+} from '../DOFunctionService/functions/authValidateUser.js';
+import {
+  ProjectDashboardInput,
+  ProjectDashboardOutput
+} from '../DOFunctionService/functions/projectDashboard.js';
 
 /**
  * A service for making calls to the backend API for personal projects. This is
@@ -10,8 +17,12 @@ export default class APIService {
   /**
    * Validates the provided username and password against the database and
    * returns the user's information if successful.
+   *
+   * @param input
    */
-  static async validateUser(input: AuthValidateUserInput) {
+  static async validateUser(
+    input: AuthValidateUserInput
+  ): Promise<DOFunctionCallOutput<AuthValidateUserOutput>> {
     const result = await DOFunctionService.authValidateUser.call(input);
     return result;
   }
@@ -23,8 +34,12 @@ export default class APIService {
   /**
    * Calls the dashboard API and returns the result. This will fail if the
    * dashboard API URL has not been set. See {@link setDashboardAPIUrl}.
+   *
+   * @param input
    */
-  static async callDashboardAPI(input: ProjectDashboardInput) {
+  static async callDashboardAPI(
+    input: ProjectDashboardInput
+  ): Promise<DOFunctionCallOutput<ProjectDashboardOutput>> {
     const result = await DOFunctionService.projectDashboard.call(input);
     return result;
   }

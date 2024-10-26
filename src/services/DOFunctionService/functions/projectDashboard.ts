@@ -7,7 +7,10 @@ import {
   UserCTO
 } from '@aneuhold/core-ts-db-lib';
 import { Translations } from '../../../types/Translations.js';
-import DOFunction, { DOFunctionInput, DOFunctionOutput } from '../DOFunction.js';
+import DOFunction, {
+  DOFunctionInput,
+  DOFunctionOutput
+} from '../DOFunction.js';
 
 export interface ProjectDashboardOptions {
   get?: {
@@ -67,7 +70,7 @@ export default class ProjectDashboard extends DOFunction<
     super();
   }
 
-  static getFunction() {
+  static getFunction(): ProjectDashboard {
     if (!ProjectDashboard.instance) {
       ProjectDashboard.instance = new ProjectDashboard();
     }

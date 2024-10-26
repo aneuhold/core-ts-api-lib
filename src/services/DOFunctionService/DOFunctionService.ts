@@ -14,11 +14,11 @@ import ProjectDashboard from './functions/projectDashboard.js';
  * A service to provide some utility related to Digital Ocean functions.
  */
 export default class DOFunctionService {
-  static auchCheckPassword = AuthCheckPassword.getFunction();
+  static authCheckPassword: AuthCheckPassword = AuthCheckPassword.getFunction();
 
-  static authValidateUser = AuthValidateUser.getFunction();
+  static authValidateUser: AuthValidateUser = AuthValidateUser.getFunction();
 
-  static projectDashboard = ProjectDashboard.getFunction();
+  static projectDashboard: ProjectDashboard = ProjectDashboard.getFunction();
 
   /**
    * A generic method to handle any API request on the backend. This has
@@ -27,6 +27,9 @@ export default class DOFunctionService {
    * This will take care of returning the error if the handler throws.
    * Ideally the handler should not throw though unless something really
    * unexpected happened.
+   *
+   * @param rawInput
+   * @param handler
    */
   static async handleApiRequest<
     TInput extends DOFunctionInput,
