@@ -43,7 +43,7 @@
     "TypeScript"
   ],
   "dependencies": {
-    "@aneuhold/core-ts-db-lib": "^2.0.2",
+    "@aneuhold/core-ts-db-lib": "^2.0.4",
     "@aneuhold/core-ts-lib": "^2.0.6",
     "bson": "^6.2.0"
   },
