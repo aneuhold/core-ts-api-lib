@@ -11,7 +11,7 @@ __metadata:
   dependencies:
     "@aneuhold/core-ts-db-lib": "npm:^2.0.66"
     "@aneuhold/core-ts-lib": "npm:^2.1.1"
-    "@aneuhold/eslint-config": "npm:^1.0.96"
+    "@aneuhold/eslint-config": "npm:^1.0.97"
     "@aneuhold/main-scripts": "npm:^2.1.2"
     "@types/node": "npm:^22.15.19"
     bson: "npm:^6.2.0"
@@ -42,9 +42,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aneuhold/eslint-config@npm:^1.0.96":
-  version: 1.0.96
-  resolution: "@aneuhold/eslint-config@npm:1.0.96"
+"@aneuhold/eslint-config@npm:^1.0.97":
+  version: 1.0.97
+  resolution: "@aneuhold/eslint-config@npm:1.0.97"
   dependencies:
     "@eslint/js": "npm:^9.27.0"
     "@stylistic/eslint-plugin-js": "npm:^3.0.0"
@@ -63,7 +63,7 @@ __metadata:
     typescript-eslint: "npm:^8.32.1"
   peerDependencies:
     eslint: ">= 9.27.0"
-  checksum: 10c0/44039ade3d7ff12eaddadca2f161836c4e445ade153ddab8bc214c5014b0d625afa1b78ed87f3dc1d39675503a8572f6441907fbb92d5aaacf86ae7542d306f1
+  checksum: 10c0/51c072a464d9ce3eaed919c36646226029df9bda164a5f5daf835b8f3302728f0b0e977909de19c16f7536990b071ccfdacc50253be5622493f209ac13d2694f
   languageName: node
   linkType: hard
 
